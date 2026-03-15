@@ -1,0 +1,216 @@
+{
+  "signIn": {
+    "title": "Connexion",
+    "password": "Mot de passe",
+    "rememberMe": "Se souvenir de moi",
+    "forgotPassword": "Mot de passe oublié ?",
+    "magicLink": "Se connecter avec un lien magique",
+    "signUp": "Ou s'inscrire",
+    "cancel": "Annuler",
+    "submit": "Se connecter",
+    "successTitle": "Connecté",
+    "successDescription": "Vous êtes connecté avec succès.",
+    "errors": {
+      "emailRequired": "L'email est requis",
+      "emailInvalid": "Doit être un email valide",
+      "passwordRequired": "Le mot de passe est requis",
+      "invalidCredentials": "Email ou mot de passe invalide"
+    }
+  },
+  "forgotPassword": {
+    "title": "Mot de passe oublié",
+    "description": "Entrez votre adresse email et nous vous enverrons un lien pour réinitialiser votre mot de passe.",
+    "backToSignIn": "Retour à la connexion",
+    "submit": "Envoyer le lien",
+    "successTitle": "Email envoyé",
+    "successDescription": "Si un compte existe avec cet email, vous recevrez un lien de réinitialisation.",
+    "errors": {
+      "emailRequired": "L'email est requis",
+      "emailInvalid": "Doit être un email valide",
+      "serverError": "Une erreur est survenue. Veuillez réessayer."
+    }
+  },
+  "forgotPasswordVerify": {
+    "title": "Réinitialiser le mot de passe",
+    "description": "Entrez votre nouveau mot de passe.",
+    "newPassword": "Nouveau mot de passe",
+    "confirmPassword": "Confirmer le nouveau mot de passe",
+    "submit": "Réinitialiser le mot de passe",
+    "invalidLink": "Ce lien de réinitialisation est invalide ou a expiré.",
+    "successTitle": "Mot de passe réinitialisé",
+    "successDescription": "Votre mot de passe a été réinitialisé avec succès. Vous pouvez maintenant vous connecter avec votre nouveau mot de passe.",
+    "errors": {
+      "passwordRequired": "Le mot de passe est requis",
+      "passwordWeak": "Le mot de passe ne respecte pas les exigences",
+      "confirmPasswordRequired": "Veuillez confirmer votre mot de passe",
+      "passwordMismatch": "Les mots de passe ne correspondent pas",
+      "serverError": "Une erreur est survenue. Le lien est peut-être invalide ou expiré."
+    }
+  },
+  "magicLink": {
+    "title": "Lien magique",
+    "description": "Entrez votre adresse email et nous vous enverrons un lien pour vous connecter sans mot de passe.",
+    "submit": "Envoyer le lien magique",
+    "successTitle": "Lien magique envoyé",
+    "successDescription": "Si un compte existe avec cet email, vous recevrez un lien de connexion.",
+    "errors": {
+      "emailRequired": "L'email est requis",
+      "emailInvalid": "Doit être un email valide",
+      "serverError": "Une erreur est survenue. Veuillez réessayer."
+    }
+  },
+  "magicLinkValidate": {
+    "title": "Lien magique",
+    "validating": "Validation de votre lien magique...",
+    "successTitle": "Connecté",
+    "successDescription": "Vous êtes connecté avec succès.",
+    "expired": "Ce lien magique a expiré. Veuillez en demander un nouveau.",
+    "error": "Ce lien magique est invalide. Veuillez en demander un nouveau.",
+    "requestNew": "Demander un nouveau lien"
+  },
+  "signUp": {
+    "title": "Inscription",
+    "password": "Mot de passe",
+    "confirmPassword": "Confirmer le mot de passe",
+    "cancel": "Annuler",
+    "submit": "S'inscrire",
+    "successTitle": "Inscription réussie",
+    "successDescription": "Un email de vérification a été envoyé à votre adresse. Veuillez vérifier votre boîte de réception.",
+    "errors": {
+      "emailRequired": "L'email est requis",
+      "emailInvalid": "Doit être un email valide",
+      "emailAlreadyUsed": "Cet email est déjà utilisé",
+      "passwordRequired": "Le mot de passe est requis",
+      "passwordWeak": "Le mot de passe ne respecte pas les exigences",
+      "confirmPasswordRequired": "Veuillez confirmer votre mot de passe",
+      "passwordMismatch": "Les mots de passe ne correspondent pas",
+      "serverError": "Une erreur est survenue. Veuillez réessayer."
+    }
+  },
+  "verifyEmail": {
+    "title": "Vérification de l'email",
+    "validating": "Validation de votre adresse email...",
+    "successTitle": "Email vérifié",
+    "successDescription": "Votre adresse email a été vérifiée avec succès.",
+    "error": "Ce lien de vérification est invalide ou a expiré."
+  },
+  "changePassword": {
+    "title": "Changer le mot de passe",
+    "currentPassword": "Mot de passe actuel",
+    "newPassword": "Nouveau mot de passe",
+    "confirmPassword": "Confirmer le nouveau mot de passe",
+    "submit": "Changer le mot de passe",
+    "successTitle": "Mot de passe modifié",
+    "successDescription": "Votre mot de passe a été modifié avec succès.",
+    "errors": {
+      "emailRequired": "L'email est requis",
+      "emailInvalid": "Doit être un email valide",
+      "currentPasswordRequired": "Le mot de passe actuel est requis",
+      "newPasswordRequired": "Le nouveau mot de passe est requis",
+      "passwordWeak": "Le mot de passe ne respecte pas les exigences",
+      "confirmPasswordRequired": "Veuillez confirmer votre mot de passe",
+      "passwordMismatch": "Les mots de passe ne correspondent pas",
+      "serverError": "Une erreur est survenue. Veuillez réessayer."
+    }
+  },
+  "deleteAccount": {
+    "title": "Supprimer le compte",
+    "description": "Cette action est irréversible. Veuillez entrer vos identifiants pour confirmer la suppression du compte.",
+    "password": "Mot de passe",
+    "submit": "Supprimer mon compte",
+    "successTitle": "Suppression du compte demandée",
+    "successDescription": "Un email de confirmation a été envoyé. Veuillez vérifier votre boîte de réception pour finaliser la suppression.",
+    "confirm": {
+      "title": "Êtes-vous sûr ?",
+      "message": "Cette action est permanente et ne peut pas être annulée. Toutes vos données seront supprimées.",
+      "yes": "Oui, supprimer mon compte",
+      "no": "Annuler"
+    },
+    "errors": {
+      "emailRequired": "L'email est requis",
+      "emailInvalid": "Doit être un email valide",
+      "passwordRequired": "Le mot de passe est requis",
+      "serverError": "Une erreur est survenue. Veuillez réessayer."
+    }
+  },
+  "deleteAccountVerify": {
+    "title": "Confirmation de suppression du compte",
+    "validating": "Traitement de la suppression du compte...",
+    "successTitle": "Compte supprimé",
+    "successDescription": "Votre compte a été définitivement supprimé.",
+    "error": "Ce lien de suppression est invalide ou a expiré."
+  },
+  "mfaSetup": {
+    "title": "Configurer l'authentification à deux facteurs",
+    "description": "Entrez vos identifiants pour commencer la configuration de l'authentification à deux facteurs.",
+    "password": "Mot de passe",
+    "continue": "Continuer",
+    "scanDescription": "Scannez ce QR code avec votre application d'authentification, ou entrez le code manuellement.",
+    "manualCode": "Code manuel",
+    "verificationCode": "Code de vérification",
+    "verify": "Vérifier",
+    "recoveryDescription": "Sauvegardez ces codes de récupération dans un endroit sûr. Vous pouvez les utiliser pour accéder à votre compte si vous perdez votre appareil d'authentification.",
+    "recoveryWarning": "Ces codes ne seront plus affichés.",
+    "done": "Terminé",
+    "successTitle": "Authentification à deux facteurs activée",
+    "successDescription": "Votre compte est maintenant protégé par l'authentification à deux facteurs.",
+    "errors": {
+      "emailRequired": "L'email est requis",
+      "emailInvalid": "Doit être un email valide",
+      "passwordRequired": "Le mot de passe est requis",
+      "codeRequired": "Le code de vérification est requis",
+      "codeLength": "Le code doit contenir 6 chiffres",
+      "invalidCode": "Code de vérification invalide",
+      "serverError": "Une erreur est survenue. Veuillez réessayer."
+    }
+  },
+  "mfaDisable": {
+    "title": "Désactiver l'authentification à deux facteurs",
+    "description": "Entrez vos identifiants et un code de vérification pour désactiver l'authentification à deux facteurs.",
+    "password": "Mot de passe",
+    "verificationCode": "Code de vérification",
+    "submit": "Désactiver",
+    "confirm": {
+      "title": "Êtes-vous sûr ?",
+      "message": "La désactivation de l'authentification à deux facteurs rendra votre compte moins sécurisé.",
+      "yes": "Oui, désactiver",
+      "no": "Annuler"
+    },
+    "successTitle": "Authentification à deux facteurs désactivée",
+    "successDescription": "L'authentification à deux facteurs a été retirée de votre compte.",
+    "errors": {
+      "emailRequired": "L'email est requis",
+      "emailInvalid": "Doit être un email valide",
+      "passwordRequired": "Le mot de passe est requis",
+      "codeRequired": "Le code de vérification est requis",
+      "codeLength": "Le code doit contenir 6 chiffres",
+      "serverError": "Identifiants ou code de vérification invalide"
+    }
+  },
+  "passwordRules": {
+    "minLength": "Au moins 8 caractères",
+    "hasLowercase": "Au moins une lettre minuscule",
+    "hasUppercase": "Au moins une lettre majuscule",
+    "hasDigit": "Au moins un chiffre",
+    "hasSpecialChar": "Au moins un caractère spécial",
+    "noSequentialChars": "Pas de caractères séquentiels (ex. abcd, 1234)",
+    "noRepeatedChars": "Pas de caractères répétés (ex. aaa, 111)",
+    "noKeyboardSequence": "Pas de séquences clavier (ex. azerty, qsdf, wxcv)",
+    "noUserInfo": "Ne doit pas contenir vos informations email",
+    "noCommonPassword": "Pas un mot de passe courant"
+  },
+  "orDivider": {
+    "or": "ou"
+  },
+  "confirmation": {
+    "canCloseTab": "Vous pouvez maintenant fermer cet onglet."
+  },
+  "redirection": {
+    "countdown": "Vous serez redirigé dans {{seconds}} secondes...",
+    "redirectNow": "Rediriger maintenant"
+  },
+  "notFound": {
+    "title": "Page introuvable",
+    "description": "La page que vous recherchez n'existe pas."
+  }
+}

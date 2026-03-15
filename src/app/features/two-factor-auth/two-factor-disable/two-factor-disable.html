@@ -1,0 +1,37 @@
+<app-auth-layout>
+  <span authLayoutTitle *transloco="let t">{{ t('mfaDisable.title') }}</span>
+  <div class="vertical-container" *transloco="let t">
+    <p>{{ t('mfaDisable.description') }}</p>
+    <mat-form-field>
+      <mat-label>Email</mat-label>
+      <input matInput type="email" [formControl]="emailFC">
+      @if (emailFC.hasError('required')) {
+        <mat-error>{{ t('mfaDisable.errors.emailRequired') }}</mat-error>
+      } @else if (emailFC.hasError('email')) {
+        <mat-error>{{ t('mfaDisable.errors.emailInvalid') }}</mat-error>
+      }
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>{{ t('mfaDisable.password') }}</mat-label>
+      <input matInput type="password" [formControl]="passwordFC" #passwordInput>
+      <button mat-icon-button matSuffix (click)="passwordInput.type === 'password' ? passwordInput.type = 'text' : passwordInput.type = 'password'" type="button">
+        <mat-icon>{{ passwordInput.type === 'password' ? 'visibility_off' : 'visibility' }}</mat-icon>
+      </button>
+      @if (passwordFC.hasError('required')) {
+        <mat-error>{{ t('mfaDisable.errors.passwordRequired') }}</mat-error>
+      }
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>{{ t('mfaDisable.verificationCode') }}</mat-label>
+      <input matInput [formControl]="codeFC" maxlength="6" inputmode="numeric">
+      @if (codeFC.hasError('required')) {
+        <mat-error>{{ t('mfaDisable.errors.codeRequired') }}</mat-error>
+      } @else if (codeFC.hasError('minlength') || codeFC.hasError('maxlength')) {
+        <mat-error>{{ t('mfaDisable.errors.codeLength') }}</mat-error>
+      }
+    </mat-form-field>
+    <button mat-flat-button color="warn" class="full-width" (click)="onSubmit()" [disabled]="submitting() || !disableFG.valid">
+      {{ t('mfaDisable.submit') }}
+    </button>
+  </div>
+</app-auth-layout>

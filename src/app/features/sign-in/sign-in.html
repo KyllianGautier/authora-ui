@@ -1,0 +1,36 @@
+<app-auth-layout>
+  <span authLayoutTitle *transloco="let t">{{ t('signIn.title') }}</span>
+  <div class="vertical-container" *transloco="let t">
+    <mat-form-field>
+      <mat-label>Email</mat-label>
+      <input matInput type="email" [formControl]="emailFC">
+      @if (emailFC.hasError('required')) {
+        <mat-error>{{ t('signIn.errors.emailRequired') }}</mat-error>
+      } @else if (emailFC.hasError('email')) {
+        <mat-error>{{ t('signIn.errors.emailInvalid') }}</mat-error>
+      }
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>{{ t('signIn.password') }}</mat-label>
+      <input matInput type="password" [formControl]="passwordFC" #passwordInput>
+      <button mat-icon-button matSuffix (click)="passwordInput.type === 'password' ? passwordInput.type = 'text' : passwordInput.type = 'password'" type="button">
+        <mat-icon>{{ passwordInput.type === 'password' ? 'visibility_off' : 'visibility' }}</mat-icon>
+      </button>
+      @if (passwordFC.hasError('required')) {
+        <mat-error>{{ t('signIn.errors.passwordRequired') }}</mat-error>
+      }
+      <mat-hint align="end">
+        <a routerLink="forgot-password" [state]="{ email: emailFC.value }" (click)="backToPageService.push()">{{ t('signIn.forgotPassword') }}</a>
+      </mat-hint>
+    </mat-form-field>
+    <div class="remember-signup">
+      <mat-checkbox [formControl]="rememberMeFC">{{ t('signIn.rememberMe') }}</mat-checkbox>
+      <a mat-button routerLink="../sign-up" (click)="backToPageService.push()">{{ t('signIn.signUp') }} <mat-icon>arrow_forward</mat-icon></a>
+    </div>
+    <button mat-flat-button color="primary" class="full-width" (click)="onSubmit()" [disabled]="submitting() || !signInFG.valid">
+      {{ t('signIn.submit') }}
+    </button>
+    <app-or-divider />
+    <a mat-stroked-button color="primary" routerLink="magic-link" [state]="{ email: emailFC.value }" (click)="backToPageService.push()">{{ t('signIn.magicLink') }}</a>
+  </div>
+</app-auth-layout>

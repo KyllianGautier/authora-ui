@@ -1,0 +1,216 @@
+{
+  "signIn": {
+    "title": "Sign In",
+    "password": "Password",
+    "rememberMe": "Remember me",
+    "forgotPassword": "Forgot password?",
+    "magicLink": "Sign in with a magic link",
+    "signUp": "Or sign up",
+    "cancel": "Cancel",
+    "submit": "Sign in",
+    "successTitle": "Signed in",
+    "successDescription": "You have been signed in successfully.",
+    "errors": {
+      "emailRequired": "Email is required",
+      "emailInvalid": "Must be a valid email",
+      "passwordRequired": "Password is required",
+      "invalidCredentials": "Invalid email or password"
+    }
+  },
+  "forgotPassword": {
+    "title": "Forgot Password",
+    "description": "Enter your email address and we'll send you a link to reset your password.",
+    "backToSignIn": "Back to sign in",
+    "submit": "Send reset link",
+    "successTitle": "Email sent",
+    "successDescription": "If an account exists with this email, you will receive a password reset link.",
+    "errors": {
+      "emailRequired": "Email is required",
+      "emailInvalid": "Must be a valid email",
+      "serverError": "An error occurred. Please try again."
+    }
+  },
+  "forgotPasswordVerify": {
+    "title": "Reset Password",
+    "description": "Enter your new password.",
+    "newPassword": "New password",
+    "confirmPassword": "Confirm new password",
+    "submit": "Reset password",
+    "invalidLink": "This password reset link is invalid or has expired.",
+    "successTitle": "Password reset",
+    "successDescription": "Your password has been reset successfully. You can now sign in with your new password.",
+    "errors": {
+      "passwordRequired": "Password is required",
+      "passwordWeak": "Password does not meet requirements",
+      "confirmPasswordRequired": "Please confirm your password",
+      "passwordMismatch": "Passwords do not match",
+      "serverError": "An error occurred. The link may be invalid or expired."
+    }
+  },
+  "magicLink": {
+    "title": "Magic Link",
+    "description": "Enter your email address and we'll send you a link to sign in without a password.",
+    "submit": "Send magic link",
+    "successTitle": "Magic link sent",
+    "successDescription": "If an account exists with this email, you will receive a sign-in link.",
+    "errors": {
+      "emailRequired": "Email is required",
+      "emailInvalid": "Must be a valid email",
+      "serverError": "An error occurred. Please try again."
+    }
+  },
+  "magicLinkValidate": {
+    "title": "Magic Link",
+    "validating": "Validating your magic link...",
+    "successTitle": "Signed in",
+    "successDescription": "You have been signed in successfully.",
+    "expired": "This magic link has expired. Please request a new one.",
+    "error": "This magic link is invalid. Please request a new one.",
+    "requestNew": "Request a new link"
+  },
+  "signUp": {
+    "title": "Sign Up",
+    "password": "Password",
+    "confirmPassword": "Confirm password",
+    "cancel": "Cancel",
+    "submit": "Sign up",
+    "successTitle": "Registration successful",
+    "successDescription": "A verification email has been sent to your address. Please check your inbox.",
+    "errors": {
+      "emailRequired": "Email is required",
+      "emailInvalid": "Must be a valid email",
+      "emailAlreadyUsed": "Email is already used",
+      "passwordRequired": "Password is required",
+      "passwordWeak": "Password does not meet requirements",
+      "confirmPasswordRequired": "Please confirm your password",
+      "passwordMismatch": "Passwords do not match",
+      "serverError": "An error occurred. Please try again."
+    }
+  },
+  "verifyEmail": {
+    "title": "Email Verification",
+    "validating": "Validating your email address...",
+    "successTitle": "Email verified",
+    "successDescription": "Your email address has been verified successfully.",
+    "error": "This verification link is invalid or has expired."
+  },
+  "changePassword": {
+    "title": "Change Password",
+    "currentPassword": "Current password",
+    "newPassword": "New password",
+    "confirmPassword": "Confirm new password",
+    "submit": "Change password",
+    "successTitle": "Password changed",
+    "successDescription": "Your password has been changed successfully.",
+    "errors": {
+      "emailRequired": "Email is required",
+      "emailInvalid": "Must be a valid email",
+      "currentPasswordRequired": "Current password is required",
+      "newPasswordRequired": "New password is required",
+      "passwordWeak": "Password does not meet requirements",
+      "confirmPasswordRequired": "Please confirm your password",
+      "passwordMismatch": "Passwords do not match",
+      "serverError": "An error occurred. Please try again."
+    }
+  },
+  "deleteAccount": {
+    "title": "Delete Account",
+    "description": "This action is irreversible. Please enter your credentials to confirm account deletion.",
+    "password": "Password",
+    "submit": "Delete my account",
+    "successTitle": "Account deletion requested",
+    "successDescription": "A confirmation email has been sent. Please check your inbox to complete the deletion.",
+    "confirm": {
+      "title": "Are you sure?",
+      "message": "This action is permanent and cannot be undone. All your data will be deleted.",
+      "yes": "Yes, delete my account",
+      "no": "Cancel"
+    },
+    "errors": {
+      "emailRequired": "Email is required",
+      "emailInvalid": "Must be a valid email",
+      "passwordRequired": "Password is required",
+      "serverError": "An error occurred. Please try again."
+    }
+  },
+  "deleteAccountVerify": {
+    "title": "Account Deletion Confirmation",
+    "validating": "Processing account deletion...",
+    "successTitle": "Account deleted",
+    "successDescription": "Your account has been permanently deleted.",
+    "error": "This deletion link is invalid or has expired."
+  },
+  "mfaSetup": {
+    "title": "Set Up Two-Factor Authentication",
+    "description": "Enter your credentials to begin setting up two-factor authentication.",
+    "password": "Password",
+    "continue": "Continue",
+    "scanDescription": "Scan this QR code with your authenticator app, or enter the code manually.",
+    "manualCode": "Manual code",
+    "verificationCode": "Verification code",
+    "verify": "Verify",
+    "recoveryDescription": "Save these recovery codes in a safe place. You can use them to access your account if you lose your authenticator device.",
+    "recoveryWarning": "These codes will not be shown again.",
+    "done": "Done",
+    "successTitle": "Two-factor authentication enabled",
+    "successDescription": "Your account is now protected with two-factor authentication.",
+    "errors": {
+      "emailRequired": "Email is required",
+      "emailInvalid": "Must be a valid email",
+      "passwordRequired": "Password is required",
+      "codeRequired": "Verification code is required",
+      "codeLength": "Code must be 6 digits",
+      "invalidCode": "Invalid verification code",
+      "serverError": "An error occurred. Please try again."
+    }
+  },
+  "mfaDisable": {
+    "title": "Disable Two-Factor Authentication",
+    "description": "Enter your credentials and a verification code to disable two-factor authentication.",
+    "password": "Password",
+    "verificationCode": "Verification code",
+    "submit": "Disable",
+    "confirm": {
+      "title": "Are you sure?",
+      "message": "Disabling two-factor authentication will make your account less secure.",
+      "yes": "Yes, disable",
+      "no": "Cancel"
+    },
+    "successTitle": "Two-factor authentication disabled",
+    "successDescription": "Two-factor authentication has been removed from your account.",
+    "errors": {
+      "emailRequired": "Email is required",
+      "emailInvalid": "Must be a valid email",
+      "passwordRequired": "Password is required",
+      "codeRequired": "Verification code is required",
+      "codeLength": "Code must be 6 digits",
+      "serverError": "Invalid credentials or verification code"
+    }
+  },
+  "passwordRules": {
+    "minLength": "At least 8 characters",
+    "hasLowercase": "At least one lowercase letter",
+    "hasUppercase": "At least one uppercase letter",
+    "hasDigit": "At least one digit",
+    "hasSpecialChar": "At least one special character",
+    "noSequentialChars": "No sequential characters (e.g. abcd, 1234)",
+    "noRepeatedChars": "No repeated characters (e.g. aaa, 111)",
+    "noKeyboardSequence": "No keyboard sequences (e.g. qwerty, asdf, zxcv)",
+    "noUserInfo": "Must not contain your email information",
+    "noCommonPassword": "Not a commonly used password"
+  },
+  "orDivider": {
+    "or": "or"
+  },
+  "confirmation": {
+    "canCloseTab": "You can now close this tab."
+  },
+  "redirection": {
+    "countdown": "You will be redirected in {{seconds}} seconds...",
+    "redirectNow": "Redirect now"
+  },
+  "notFound": {
+    "title": "Page Not Found",
+    "description": "The page you are looking for does not exist."
+  }
+}

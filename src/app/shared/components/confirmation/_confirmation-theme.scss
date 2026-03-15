@@ -1,0 +1,21 @@
+@use '@angular/material' as mat;
+
+@mixin color($theme) {
+  app-confirmation {
+    .success {
+      color: mat.m2-get-color-from-palette(mat.$m2-green-palette, 500);
+    }
+  }
+}
+
+@mixin typography($theme) {}
+
+@mixin theme($theme) {
+  @if mat.theme-has($theme, color) {
+    @include color($theme);
+  }
+
+  @if mat.theme-has($theme, typography) {
+    @include typography($theme);
+  }
+}

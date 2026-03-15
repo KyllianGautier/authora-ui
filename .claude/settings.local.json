@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(wc:*)",
+      "Bash(git:*)",
+      "WebFetch(domain:material.angular.io)",
+      "WebFetch(domain:material.angular.dev)",
+      "Bash(npx ng:*)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "WebFetch(domain:v18.material.angular.dev)",
+      "Bash(npm install:*)",
+      "Bash(cd:*)",
+      "Bash(npm info:*)",
+      "Bash(npm update:*)",
+      "Bash(npm view:*)",
+      "Read(//home/kyllian/Projects/authora-types/dist/output/**)",
+      "Read(//home/kyllian/Projects/authora-types/dist/input/**)",
+      "Bash(ls:*)"
+    ]
+  }
+}

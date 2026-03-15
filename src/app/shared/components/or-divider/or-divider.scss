@@ -1,0 +1,12 @@
+.or-divider {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 16px 0;
+}
+
+.line {
+  flex: 1;
+  height: 1px;
+  background-color: currentColor;
+}

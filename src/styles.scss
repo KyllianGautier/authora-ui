@@ -1,1 +1,122 @@
-/* You can add global styles to this file, and also import other style files */
+@use '@angular/material' as mat;
+@use './app/shared/components/auth-layout/auth-layout-theme' as auth-layout;
+@use './app/shared/components/confirmation/confirmation-theme' as confirmation;
+@use './app/shared/components/password-rules/password-rules-theme' as password-rules;
+@use './app/features/sign-in/magic-link-validate/magic-link-validate-theme' as magic-link-validate;
+@use './app/shared/components/or-divider/or-divider-theme' as or-divider;
+@use './app/shared/components/redirection/redirection-theme' as redirection;
+
+// Define Material 2 palettes
+$primary: mat.m2-define-palette(mat.$m2-blue-palette, 800, 500, 900);
+$accent: mat.m2-define-palette(mat.$m2-teal-palette, A400, A200, A700);
+
+// Define light theme
+$light-theme: mat.m2-define-light-theme(
+  (
+    color: (
+      primary: $primary,
+      accent: $accent,
+    ),
+    typography: mat.m2-define-typography-config($font-family: 'Sora, sans-serif'),
+    density: 0,
+  )
+);
+
+// Define dark theme
+$dark-theme: mat.m2-define-dark-theme(
+  (
+    color: (
+      primary: $primary,
+      accent: $accent,
+    ),
+  )
+);
+
+// Custom component theme mixins
+@mixin all-component-themes($theme) {
+  @include auth-layout.theme($theme);
+  @include confirmation.theme($theme);
+  @include magic-link-validate.theme($theme);
+  @include or-divider.theme($theme);
+  @include password-rules.theme($theme);
+  @include redirection.theme($theme);
+}
+
+@mixin all-component-colors($theme) {
+  @include auth-layout.color($theme);
+  @include confirmation.color($theme);
+  @include magic-link-validate.color($theme);
+  @include or-divider.color($theme);
+  @include password-rules.color($theme);
+  @include redirection.color($theme);
+}
+
+@mixin all-component-typographies($theme) {
+  @include auth-layout.typography($theme);
+  @include confirmation.typography($theme);
+  @include magic-link-validate.typography($theme);
+  @include or-divider.typography($theme);
+  @include password-rules.typography($theme);
+  @include redirection.typography($theme);
+}
+
+// Apply light theme globally
+html {
+  @include mat.all-component-themes($light-theme);
+  @include mat.m2-theme($light-theme);
+  @include all-component-themes($light-theme);
+}
+
+// Apply dark theme colors when .dark-theme is on body
+.dark-theme {
+  @include mat.all-component-colors($dark-theme);
+  @include mat.m2-theme($dark-theme);
+  @include all-component-colors($dark-theme);
+}
+
+@include mat.app-background();
+
+body {
+  font-family: Sora, sans-serif;
+  margin: 0;
+  min-height: 100vh;
+
+  background: linear-gradient(
+    135deg,
+    mat.m2-get-color-from-palette($primary, 400) 0%,
+    mat.m2-get-color-from-palette($primary, 100) 50%,
+    mat.m2-get-color-from-palette($accent, 100) 100%
+  );
+  &.dark-theme {
+    background: linear-gradient(
+      135deg,
+      mat.m2-get-color-from-palette($primary, 900) 0%,
+      mat.m2-get-color-from-palette($primary, 800) 50%,
+      mat.m2-get-color-from-palette($accent, 900) 100%
+    );
+  }
+
+  @include mat.button-overrides(
+      (
+        filled-label-text-transform: uppercase,
+        outlined-label-text-transform: uppercase,
+        protected-label-text-transform: uppercase,
+        text-label-text-transform: uppercase,
+        tonal-label-text-transform: uppercase,
+      )
+  );
+}
+
+a {
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.vertical-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}

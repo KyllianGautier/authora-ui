@@ -1,0 +1,22 @@
+<app-auth-layout>
+  <span authLayoutTitle *transloco="let t">{{ t('mfaSetup.title') }}</span>
+  <div class="vertical-container" *transloco="let t">
+    <p>{{ t('mfaSetup.scanDescription') }}</p>
+    <div class="qr-container">
+      <img [src]="qrcode" alt="QR Code" class="qr-code" />
+    </div>
+    <p class="manual-code">{{ t('mfaSetup.manualCode') }}: <strong>{{ manualCode }}</strong></p>
+    <mat-form-field>
+      <mat-label>{{ t('mfaSetup.verificationCode') }}</mat-label>
+      <input matInput [formControl]="codeFC" maxlength="6" inputmode="numeric">
+      @if (codeFC.hasError('required')) {
+        <mat-error>{{ t('mfaSetup.errors.codeRequired') }}</mat-error>
+      } @else if (codeFC.hasError('minlength') || codeFC.hasError('maxlength')) {
+        <mat-error>{{ t('mfaSetup.errors.codeLength') }}</mat-error>
+      }
+    </mat-form-field>
+    <button mat-flat-button color="primary" class="full-width" (click)="onSubmit()" [disabled]="submitting() || !codeFC.valid">
+      {{ t('mfaSetup.verify') }}
+    </button>
+  </div>
+</app-auth-layout>

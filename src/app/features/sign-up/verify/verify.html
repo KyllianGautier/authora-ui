@@ -1,0 +1,19 @@
+<app-auth-layout>
+  <span authLayoutTitle *transloco="let t">{{ t('verifyEmail.title') }}</span>
+  <div class="vertical-container status-container" *transloco="let t">
+    @switch (status()) {
+      @case ('loading') {
+        <mat-spinner diameter="64" />
+        <p>{{ t('verifyEmail.validating') }}</p>
+      }
+      @case ('success') {
+        <mat-icon class="status-icon success">check_circle</mat-icon>
+        <p>{{ t('verifyEmail.successDescription') }}</p>
+      }
+      @case ('error') {
+        <mat-icon class="status-icon warn">error</mat-icon>
+        <p>{{ t('verifyEmail.error') }}</p>
+      }
+    }
+  </div>
+</app-auth-layout>

@@ -1,0 +1,18 @@
+<app-auth-layout>
+  <span authLayoutTitle *transloco="let t">{{ t('magicLink.title') }}</span>
+  <div class="vertical-container" *transloco="let t">
+    <p>{{ t('magicLink.description') }}</p>
+    <mat-form-field>
+      <mat-label>Email</mat-label>
+      <input matInput type="email" [formControl]="emailFC">
+      @if (emailFC.hasError('required')) {
+        <mat-error>{{ t('magicLink.errors.emailRequired') }}</mat-error>
+      } @else if (emailFC.hasError('email')) {
+        <mat-error>{{ t('magicLink.errors.emailInvalid') }}</mat-error>
+      }
+    </mat-form-field>
+    <button mat-flat-button color="primary" class="full-width" (click)="onSubmit()" [disabled]="submitting() || !emailFC.valid">
+      {{ t('magicLink.submit') }}
+    </button>
+  </div>
+</app-auth-layout>

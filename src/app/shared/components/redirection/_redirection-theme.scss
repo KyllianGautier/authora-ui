@@ -1,0 +1,35 @@
+@use '@angular/material' as mat;
+
+@mixin color($theme) {
+  app-redirection {
+    .wait-icon {
+      color: mat.get-theme-color($theme, primary, default);
+    }
+
+    .countdown {
+      color: mat.get-theme-color($theme, foreground, secondary-text);
+    }
+  }
+}
+
+@mixin typography($theme) {
+  app-redirection {
+    .message {
+      font: mat.get-theme-typography($theme, body-1);
+    }
+
+    .countdown {
+      font: mat.get-theme-typography($theme, caption);
+    }
+  }
+}
+
+@mixin theme($theme) {
+  @if mat.theme-has($theme, color) {
+    @include color($theme);
+  }
+
+  @if mat.theme-has($theme, typography) {
+    @include typography($theme);
+  }
+}

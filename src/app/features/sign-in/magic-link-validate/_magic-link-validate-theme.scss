@@ -1,0 +1,25 @@
+@use '@angular/material' as mat;
+
+@mixin color($theme) {
+  app-magic-link-validate {
+    .success {
+      color: mat.m2-get-color-from-palette(mat.$m2-green-palette, 500);
+    }
+
+    .warn {
+      color: mat.get-theme-color($theme, warn, default);
+    }
+  }
+}
+
+@mixin typography($theme) {}
+
+@mixin theme($theme) {
+  @if mat.theme-has($theme, color) {
+    @include color($theme);
+  }
+
+  @if mat.theme-has($theme, typography) {
+    @include typography($theme);
+  }
+}

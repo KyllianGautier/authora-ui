@@ -1,0 +1,28 @@
+<app-auth-layout>
+  <span authLayoutTitle *transloco="let t">{{ t('deleteAccount.title') }}</span>
+  <div class="vertical-container" *transloco="let t">
+    <p>{{ t('deleteAccount.description') }}</p>
+    <mat-form-field>
+      <mat-label>Email</mat-label>
+      <input matInput type="email" [formControl]="emailFC">
+      @if (emailFC.hasError('required')) {
+        <mat-error>{{ t('deleteAccount.errors.emailRequired') }}</mat-error>
+      } @else if (emailFC.hasError('email')) {
+        <mat-error>{{ t('deleteAccount.errors.emailInvalid') }}</mat-error>
+      }
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>{{ t('deleteAccount.password') }}</mat-label>
+      <input matInput type="password" [formControl]="passwordFC" #passwordInput>
+      <button mat-icon-button matSuffix (click)="passwordInput.type === 'password' ? passwordInput.type = 'text' : passwordInput.type = 'password'" type="button">
+        <mat-icon>{{ passwordInput.type === 'password' ? 'visibility_off' : 'visibility' }}</mat-icon>
+      </button>
+      @if (passwordFC.hasError('required')) {
+        <mat-error>{{ t('deleteAccount.errors.passwordRequired') }}</mat-error>
+      }
+    </mat-form-field>
+    <button mat-flat-button color="warn" class="full-width" (click)="onSubmit()" [disabled]="submitting() || !deleteAccountFG.valid">
+      {{ t('deleteAccount.submit') }}
+    </button>
+  </div>
+</app-auth-layout>

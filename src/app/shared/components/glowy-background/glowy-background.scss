@@ -1,0 +1,63 @@
+:host {
+  display: block;
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.25;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.glow-purple {
+  width: 500px;
+  height: 500px;
+  background: #9c27b0;
+  top: -10%;
+  right: -5%;
+}
+
+.glow-orange {
+  width: 400px;
+  height: 400px;
+  background: #ff9800;
+  bottom: -5%;
+  left: -5%;
+}
+
+.glow-green {
+  width: 350px;
+  height: 350px;
+  background: #4caf50;
+  bottom: 10%;
+  right: 10%;
+}
+
+.glow-blue {
+  width: 450px;
+  height: 450px;
+  background: #2196f3;
+  top: 20%;
+  left: -10%;
+}
+
+.glow-pink {
+  width: 380px;
+  height: 380px;
+  background: #e91e63;
+  top: 5%;
+  left: 30%;
+}
+
+.glow-cyan {
+  width: 420px;
+  height: 420px;
+  background: #00bcd4;
+  bottom: -8%;
+  right: 25%;
+}

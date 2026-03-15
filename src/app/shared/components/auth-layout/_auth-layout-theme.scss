@@ -1,0 +1,35 @@
+@use '@angular/material' as mat;
+
+@mixin color($theme) {
+  app-auth-layout {
+    .toolbar {
+      color: mat.get-theme-color($theme, foreground, text);
+    }
+
+    a:not([mat-button]):not([mat-flat-button]):not([mat-stroked-button]) {
+      color: mat.get-theme-color($theme, primary, default);
+
+      &:visited {
+        color: mat.get-theme-color($theme, primary, darker);
+      }
+    }
+  }
+}
+
+@mixin typography($theme) {
+  app-auth-layout {
+    .auth-title {
+      font: mat.get-theme-typography($theme, headline-5);
+    }
+  }
+}
+
+@mixin theme($theme) {
+  @if mat.theme-has($theme, color) {
+    @include color($theme);
+  }
+
+  @if mat.theme-has($theme, typography) {
+    @include typography($theme);
+  }
+}

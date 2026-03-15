@@ -1,0 +1,12 @@
+<app-auth-layout>
+  @if (title) {
+    <span authLayoutTitle>{{ title }}</span>
+  }
+  <div class="vertical-container confirmation" *transloco="let t">
+    <mat-icon class="status-icon success">check_circle</mat-icon>
+    @if (message) {
+      <p>{{ message }}</p>
+    }
+    <p>{{ t('confirmation.canCloseTab') }}</p>
+  </div>
+</app-auth-layout>

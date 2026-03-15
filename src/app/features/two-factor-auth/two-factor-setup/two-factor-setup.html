@@ -1,0 +1,28 @@
+<app-auth-layout>
+  <span authLayoutTitle *transloco="let t">{{ t('mfaSetup.title') }}</span>
+  <div class="vertical-container" *transloco="let t">
+    <p>{{ t('mfaSetup.description') }}</p>
+    <mat-form-field>
+      <mat-label>Email</mat-label>
+      <input matInput type="email" [formControl]="emailFC">
+      @if (emailFC.hasError('required')) {
+        <mat-error>{{ t('mfaSetup.errors.emailRequired') }}</mat-error>
+      } @else if (emailFC.hasError('email')) {
+        <mat-error>{{ t('mfaSetup.errors.emailInvalid') }}</mat-error>
+      }
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>{{ t('mfaSetup.password') }}</mat-label>
+      <input matInput type="password" [formControl]="passwordFC" #passwordInput>
+      <button mat-icon-button matSuffix (click)="passwordInput.type === 'password' ? passwordInput.type = 'text' : passwordInput.type = 'password'" type="button">
+        <mat-icon>{{ passwordInput.type === 'password' ? 'visibility_off' : 'visibility' }}</mat-icon>
+      </button>
+      @if (passwordFC.hasError('required')) {
+        <mat-error>{{ t('mfaSetup.errors.passwordRequired') }}</mat-error>
+      }
+    </mat-form-field>
+    <button mat-flat-button color="primary" class="full-width" (click)="onSubmit()" [disabled]="submitting() || !credentialsFG.valid">
+      {{ t('mfaSetup.continue') }}
+    </button>
+  </div>
+</app-auth-layout>

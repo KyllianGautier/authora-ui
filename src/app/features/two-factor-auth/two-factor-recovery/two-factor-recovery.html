@@ -1,0 +1,15 @@
+<app-auth-layout>
+  <span authLayoutTitle *transloco="let t">{{ t('mfaSetup.title') }}</span>
+  <div class="vertical-container" *transloco="let t">
+    <p>{{ t('mfaSetup.recoveryDescription') }}</p>
+    <div class="recovery-codes">
+      @for (code of recoveryCodes; track code) {
+        <code>{{ code }}</code>
+      }
+    </div>
+    <p class="recovery-warning">{{ t('mfaSetup.recoveryWarning') }}</p>
+    <button mat-flat-button color="primary" class="full-width" (click)="onDone()">
+      {{ t('mfaSetup.done') }}
+    </button>
+  </div>
+</app-auth-layout>

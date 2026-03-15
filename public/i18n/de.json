@@ -1,0 +1,216 @@
+{
+  "signIn": {
+    "title": "Anmelden",
+    "password": "Passwort",
+    "rememberMe": "Angemeldet bleiben",
+    "forgotPassword": "Passwort vergessen?",
+    "magicLink": "Mit magischem Link anmelden",
+    "signUp": "Oder registrieren",
+    "cancel": "Abbrechen",
+    "submit": "Anmelden",
+    "successTitle": "Angemeldet",
+    "successDescription": "Sie haben sich erfolgreich angemeldet.",
+    "errors": {
+      "emailRequired": "E-Mail ist erforderlich",
+      "emailInvalid": "Muss eine gültige E-Mail sein",
+      "passwordRequired": "Passwort ist erforderlich",
+      "invalidCredentials": "Ungültige E-Mail oder Passwort"
+    }
+  },
+  "forgotPassword": {
+    "title": "Passwort vergessen",
+    "description": "Geben Sie Ihre E-Mail-Adresse ein und wir senden Ihnen einen Link zum Zurücksetzen Ihres Passworts.",
+    "backToSignIn": "Zurück zur Anmeldung",
+    "submit": "Link senden",
+    "successTitle": "E-Mail gesendet",
+    "successDescription": "Wenn ein Konto mit dieser E-Mail existiert, erhalten Sie einen Link zum Zurücksetzen.",
+    "errors": {
+      "emailRequired": "E-Mail ist erforderlich",
+      "emailInvalid": "Muss eine gültige E-Mail sein",
+      "serverError": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut."
+    }
+  },
+  "forgotPasswordVerify": {
+    "title": "Passwort zurücksetzen",
+    "description": "Geben Sie Ihr neues Passwort ein.",
+    "newPassword": "Neues Passwort",
+    "confirmPassword": "Neues Passwort bestätigen",
+    "submit": "Passwort zurücksetzen",
+    "invalidLink": "Dieser Link zum Zurücksetzen ist ungültig oder abgelaufen.",
+    "successTitle": "Passwort zurückgesetzt",
+    "successDescription": "Ihr Passwort wurde erfolgreich zurückgesetzt. Sie können sich jetzt mit Ihrem neuen Passwort anmelden.",
+    "errors": {
+      "passwordRequired": "Passwort ist erforderlich",
+      "passwordWeak": "Passwort erfüllt nicht die Anforderungen",
+      "confirmPasswordRequired": "Bitte bestätigen Sie Ihr Passwort",
+      "passwordMismatch": "Passwörter stimmen nicht überein",
+      "serverError": "Ein Fehler ist aufgetreten. Der Link ist möglicherweise ungültig oder abgelaufen."
+    }
+  },
+  "magicLink": {
+    "title": "Magischer Link",
+    "description": "Geben Sie Ihre E-Mail-Adresse ein und wir senden Ihnen einen Link zur Anmeldung ohne Passwort.",
+    "submit": "Magischen Link senden",
+    "successTitle": "Magischer Link gesendet",
+    "successDescription": "Wenn ein Konto mit dieser E-Mail existiert, erhalten Sie einen Anmeldelink.",
+    "errors": {
+      "emailRequired": "E-Mail ist erforderlich",
+      "emailInvalid": "Muss eine gültige E-Mail sein",
+      "serverError": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut."
+    }
+  },
+  "magicLinkValidate": {
+    "title": "Magischer Link",
+    "validating": "Ihr magischer Link wird überprüft...",
+    "successTitle": "Angemeldet",
+    "successDescription": "Sie haben sich erfolgreich angemeldet.",
+    "expired": "Dieser magische Link ist abgelaufen. Bitte fordern Sie einen neuen an.",
+    "error": "Dieser magische Link ist ungültig. Bitte fordern Sie einen neuen an.",
+    "requestNew": "Neuen Link anfordern"
+  },
+  "signUp": {
+    "title": "Registrieren",
+    "password": "Passwort",
+    "confirmPassword": "Passwort bestätigen",
+    "cancel": "Abbrechen",
+    "submit": "Registrieren",
+    "successTitle": "Registrierung erfolgreich",
+    "successDescription": "Eine Bestätigungs-E-Mail wurde an Ihre Adresse gesendet. Bitte überprüfen Sie Ihren Posteingang.",
+    "errors": {
+      "emailRequired": "E-Mail ist erforderlich",
+      "emailInvalid": "Muss eine gültige E-Mail sein",
+      "emailAlreadyUsed": "E-Mail wird bereits verwendet",
+      "passwordRequired": "Passwort ist erforderlich",
+      "passwordWeak": "Passwort erfüllt nicht die Anforderungen",
+      "confirmPasswordRequired": "Bitte bestätigen Sie Ihr Passwort",
+      "passwordMismatch": "Passwörter stimmen nicht überein",
+      "serverError": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut."
+    }
+  },
+  "verifyEmail": {
+    "title": "E-Mail-Verifizierung",
+    "validating": "Ihre E-Mail-Adresse wird überprüft...",
+    "successTitle": "E-Mail verifiziert",
+    "successDescription": "Ihre E-Mail-Adresse wurde erfolgreich verifiziert.",
+    "error": "Dieser Verifizierungslink ist ungültig oder abgelaufen."
+  },
+  "changePassword": {
+    "title": "Passwort ändern",
+    "currentPassword": "Aktuelles Passwort",
+    "newPassword": "Neues Passwort",
+    "confirmPassword": "Neues Passwort bestätigen",
+    "submit": "Passwort ändern",
+    "successTitle": "Passwort geändert",
+    "successDescription": "Ihr Passwort wurde erfolgreich geändert.",
+    "errors": {
+      "emailRequired": "E-Mail ist erforderlich",
+      "emailInvalid": "Muss eine gültige E-Mail sein",
+      "currentPasswordRequired": "Aktuelles Passwort ist erforderlich",
+      "newPasswordRequired": "Neues Passwort ist erforderlich",
+      "passwordWeak": "Passwort erfüllt nicht die Anforderungen",
+      "confirmPasswordRequired": "Bitte bestätigen Sie Ihr Passwort",
+      "passwordMismatch": "Passwörter stimmen nicht überein",
+      "serverError": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut."
+    }
+  },
+  "deleteAccount": {
+    "title": "Konto löschen",
+    "description": "Diese Aktion ist unwiderruflich. Bitte geben Sie Ihre Anmeldedaten ein, um die Kontolöschung zu bestätigen.",
+    "password": "Passwort",
+    "submit": "Mein Konto löschen",
+    "successTitle": "Kontolöschung angefordert",
+    "successDescription": "Eine Bestätigungs-E-Mail wurde gesendet. Bitte überprüfen Sie Ihren Posteingang, um die Löschung abzuschließen.",
+    "confirm": {
+      "title": "Sind Sie sicher?",
+      "message": "Diese Aktion ist dauerhaft und kann nicht rückgängig gemacht werden. Alle Ihre Daten werden gelöscht.",
+      "yes": "Ja, mein Konto löschen",
+      "no": "Abbrechen"
+    },
+    "errors": {
+      "emailRequired": "E-Mail ist erforderlich",
+      "emailInvalid": "Muss eine gültige E-Mail sein",
+      "passwordRequired": "Passwort ist erforderlich",
+      "serverError": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut."
+    }
+  },
+  "deleteAccountVerify": {
+    "title": "Kontolöschung bestätigen",
+    "validating": "Kontolöschung wird verarbeitet...",
+    "successTitle": "Konto gelöscht",
+    "successDescription": "Ihr Konto wurde dauerhaft gelöscht.",
+    "error": "Dieser Löschungslink ist ungültig oder abgelaufen."
+  },
+  "mfaSetup": {
+    "title": "Zwei-Faktor-Authentifizierung einrichten",
+    "description": "Geben Sie Ihre Anmeldedaten ein, um die Zwei-Faktor-Authentifizierung einzurichten.",
+    "password": "Passwort",
+    "continue": "Weiter",
+    "scanDescription": "Scannen Sie diesen QR-Code mit Ihrer Authentifizierungs-App oder geben Sie den Code manuell ein.",
+    "manualCode": "Manueller Code",
+    "verificationCode": "Bestätigungscode",
+    "verify": "Bestätigen",
+    "recoveryDescription": "Bewahren Sie diese Wiederherstellungscodes an einem sicheren Ort auf. Sie können sie verwenden, um auf Ihr Konto zuzugreifen, wenn Sie Ihr Authentifizierungsgerät verlieren.",
+    "recoveryWarning": "Diese Codes werden nicht erneut angezeigt.",
+    "done": "Fertig",
+    "successTitle": "Zwei-Faktor-Authentifizierung aktiviert",
+    "successDescription": "Ihr Konto ist jetzt durch Zwei-Faktor-Authentifizierung geschützt.",
+    "errors": {
+      "emailRequired": "E-Mail ist erforderlich",
+      "emailInvalid": "Muss eine gültige E-Mail sein",
+      "passwordRequired": "Passwort ist erforderlich",
+      "codeRequired": "Bestätigungscode ist erforderlich",
+      "codeLength": "Der Code muss 6 Ziffern haben",
+      "invalidCode": "Ungültiger Bestätigungscode",
+      "serverError": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut."
+    }
+  },
+  "mfaDisable": {
+    "title": "Zwei-Faktor-Authentifizierung deaktivieren",
+    "description": "Geben Sie Ihre Anmeldedaten und einen Bestätigungscode ein, um die Zwei-Faktor-Authentifizierung zu deaktivieren.",
+    "password": "Passwort",
+    "verificationCode": "Bestätigungscode",
+    "submit": "Deaktivieren",
+    "confirm": {
+      "title": "Sind Sie sicher?",
+      "message": "Das Deaktivieren der Zwei-Faktor-Authentifizierung macht Ihr Konto weniger sicher.",
+      "yes": "Ja, deaktivieren",
+      "no": "Abbrechen"
+    },
+    "successTitle": "Zwei-Faktor-Authentifizierung deaktiviert",
+    "successDescription": "Die Zwei-Faktor-Authentifizierung wurde von Ihrem Konto entfernt.",
+    "errors": {
+      "emailRequired": "E-Mail ist erforderlich",
+      "emailInvalid": "Muss eine gültige E-Mail sein",
+      "passwordRequired": "Passwort ist erforderlich",
+      "codeRequired": "Bestätigungscode ist erforderlich",
+      "codeLength": "Der Code muss 6 Ziffern haben",
+      "serverError": "Ungültige Anmeldedaten oder Bestätigungscode"
+    }
+  },
+  "passwordRules": {
+    "minLength": "Mindestens 8 Zeichen",
+    "hasLowercase": "Mindestens ein Kleinbuchstabe",
+    "hasUppercase": "Mindestens ein Großbuchstabe",
+    "hasDigit": "Mindestens eine Ziffer",
+    "hasSpecialChar": "Mindestens ein Sonderzeichen",
+    "noSequentialChars": "Keine aufeinanderfolgenden Zeichen (z.B. abcd, 1234)",
+    "noRepeatedChars": "Keine wiederholten Zeichen (z.B. aaa, 111)",
+    "noKeyboardSequence": "Keine Tastaturfolgen (z.B. qwertz, asdf, yxcv)",
+    "noUserInfo": "Darf keine Informationen aus Ihrer E-Mail enthalten",
+    "noCommonPassword": "Kein häufig verwendetes Passwort"
+  },
+  "orDivider": {
+    "or": "oder"
+  },
+  "confirmation": {
+    "canCloseTab": "Sie können diesen Tab jetzt schließen."
+  },
+  "redirection": {
+    "countdown": "Sie werden in {{seconds}} Sekunden weitergeleitet...",
+    "redirectNow": "Jetzt weiterleiten"
+  },
+  "notFound": {
+    "title": "Seite nicht gefunden",
+    "description": "Die gesuchte Seite existiert nicht."
+  }
+}

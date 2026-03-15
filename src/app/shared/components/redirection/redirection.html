@@ -1,0 +1,16 @@
+<app-auth-layout>
+  @if (title) {
+    <span authLayoutTitle>{{ title }}</span>
+  }
+  <div class="vertical-container redirection" *transloco="let t">
+    <mat-icon class="wait-icon">hourglass_top</mat-icon>
+    @if (message) {
+      <p>{{ message }}</p>
+    }
+    <p class="countdown">{{ t('redirection.countdown', { seconds: remaining() }) }}</p>
+    <mat-progress-bar mode="determinate" [value]="progress()" />
+    <button mat-stroked-button color="primary" class="full-width" (click)="redirect()">
+      {{ t('redirection.redirectNow') }}
+    </button>
+  </div>
+</app-auth-layout>

@@ -1,0 +1,13 @@
+{
+  "name": "@kylliangautier/authora-ui",
+  "version": "0.0.0",
+  "description": "Authora UI application",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kylliangautier/authora-ui.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "license": "UNLICENSED"
+}

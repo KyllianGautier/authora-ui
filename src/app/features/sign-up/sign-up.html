@@ -1,0 +1,44 @@
+<app-auth-layout>
+  <span authLayoutTitle *transloco="let t">{{ t('signUp.title') }}</span>
+  <div class="vertical-container" *transloco="let t">
+    <mat-form-field>
+      <mat-label>Email</mat-label>
+      <input matInput type="email" [formControl]="emailFC">
+      @if (emailFC.hasError('required')) {
+        <mat-error>{{ t('signUp.errors.emailRequired') }}</mat-error>
+      } @else if (emailFC.hasError('email')) {
+        <mat-error>{{ t('signUp.errors.emailInvalid') }}</mat-error>
+      } @else if (emailFC.hasError('emailAlreadyUsed')) {
+        <mat-error>{{ t('signUp.errors.emailAlreadyUsed') }}</mat-error>
+      }
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>{{ t('signUp.password') }}</mat-label>
+      <input matInput type="password" [formControl]="passwordFC" #passwordInput>
+      <button mat-icon-button matSuffix [disabled]="passwordFC.disabled" (click)="passwordInput.type === 'password' ? passwordInput.type = 'text' : passwordInput.type = 'password'" type="button">
+        <mat-icon>{{ passwordInput.type === 'password' ? 'visibility_off' : 'visibility' }}</mat-icon>
+      </button>
+      @if (passwordFC.hasError('required')) {
+        <mat-error>{{ t('signUp.errors.passwordRequired') }}</mat-error>
+      } @else if (passwordFC.hasError('passwordWeak')) {
+        <mat-error>{{ t('signUp.errors.passwordWeak') }}</mat-error>
+      }
+    </mat-form-field>
+    <app-password-rules [password]="passwordFC.value" [email]="emailFC.value" />
+    <mat-form-field>
+      <mat-label>{{ t('signUp.confirmPassword') }}</mat-label>
+      <input matInput type="password" [formControl]="confirmPasswordFC" #confirmPasswordInput>
+      <button mat-icon-button matSuffix [disabled]="confirmPasswordFC.disabled" (click)="confirmPasswordInput.type === 'password' ? confirmPasswordInput.type = 'text' : confirmPasswordInput.type = 'password'" type="button">
+        <mat-icon>{{ confirmPasswordInput.type === 'password' ? 'visibility_off' : 'visibility' }}</mat-icon>
+      </button>
+      @if (confirmPasswordFC.hasError('required')) {
+        <mat-error>{{ t('signUp.errors.confirmPasswordRequired') }}</mat-error>
+      } @else if (confirmPasswordFC.hasError('passwordMismatch')) {
+        <mat-error>{{ t('signUp.errors.passwordMismatch') }}</mat-error>
+      }
+    </mat-form-field>
+    <button mat-flat-button color="primary" class="full-width" (click)="onSubmit()" [disabled]="submitting() || !signUpFG.valid">
+      {{ t('signUp.submit') }}
+    </button>
+  </div>
+</app-auth-layout>

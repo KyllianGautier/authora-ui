@@ -1,0 +1,26 @@
+<div class="auth-page">
+  <div class="toolbar">
+    <span class="spacer"></span>
+    <app-lang-switcher />
+    <app-theme-toggle />
+  </div>
+
+  <div class="auth-container">
+    <div class="auth-card">
+      <div class="title-row">
+        <div class="title-side">
+          @if (backToPageService.canGoBack()) {
+            <button mat-icon-button (click)="backToPageService.back()">
+              <mat-icon>arrow_back</mat-icon>
+            </button>
+          }
+        </div>
+        <h2 class="auth-title">
+          <ng-content select="[authLayoutTitle]" />
+        </h2>
+        <div class="title-side"></div>
+      </div>
+      <ng-content />
+    </div>
+  </div>
+</div>
